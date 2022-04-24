@@ -3,6 +3,7 @@
 /*googleips 웹폰트 css 파일 불러오기*/
 @import url(https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /*
 font-family: 'Noto Sans KR', sans-serif;
 */
@@ -22,12 +23,13 @@ font-family: 'Galada', cursive; */
   padding: 0;
 }
 html {
-  font-size: 16px;
+  font-size: 62.5%;
 }
 body {
   font-size: 16px;
   color: #6f6f6f;
   font-family: "Nanum Gothic", sans-serif;
+  background: #f7f4ed;
 }
 ul,
 ol,
@@ -72,3 +74,152 @@ button {
 }
 
 /*********************header****************************/
+header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  z-index: 9999999999999;
+}
+
+/******************nav********************************/
+.nav_bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #183e33;
+  align-items: center;
+  padding: 8px 14px;
+}
+.nav_logo {
+  /*
+  margin: 20px 10.421vw 0;
+  */
+}
+.nav_logo img {
+}
+.nav_menu {
+  display: flex;
+  padding-left: 0;
+  font-size: 24px;
+  list-style: none;
+  text-align: center;
+}
+.nav_menu li {
+  padding: 8px 1.8229vw;
+}
+.nav_menu li a {
+  color: #fdfddf;
+  text-decoration: none;
+}
+
+/*
+.hambuger{
+  display: flex;
+  width:50px;
+  height: 50px;
+  padding: 8px 12px;
+}
+.hambuger span{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width:50px;
+  height: 2px;
+  background-color: #fdfddf;
+}
+*/
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  width: 30px;
+  height: 50px;
+  z-index: 100;
+}
+.navbar_toggleBtn span {
+  background-color: #fdfddf;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  right: 0px;
+}
+.navbar_toggleBtn span:nth-child(1) {
+  top: 0px;
+}
+.navbar_toggleBtn span:nth-child(2) {
+  top: 12px;
+}
+.navbar_toggleBtn span:nth-child(3) {
+  top: 24px;
+}
+
+a.button {
+  background: #183e33;
+  color: #fdfddf;
+  border: none;
+  position: relative;
+  height: 50px;
+  font-size: 1.2rem;
+  padding: 0 1em 0;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+a.button:hover {
+  background: #fdfddf;
+  color: #02343f;
+}
+a.button:before,
+a.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #02343f;
+  transition: 400ms ease all;
+}
+a.button:before {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+a.button:hover:before,
+a.button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .nav_logo{
+    margin: 0;
+  }
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav_menu li {
+    width: 100%;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .nav_menu.active {
+    display: flex;
+  }
+}
+
+/*********************footer****************************/
