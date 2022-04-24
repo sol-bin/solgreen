@@ -1,0 +1,422 @@
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  /*
+  text-align: center;
+  */
+  background: beige;
+  /*
+  overflow: hidden;
+  */
+}
+
+/*********************section****************************/
+#sec1 {
+  width: 100%;
+  margin-bottom: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+  margin: 20px 0;
+*/
+}
+/***캐릭터 영역***/
+#sec1 .container {
+  position: absolute;
+  margin: auto;
+  /*
+  margin: 40vh 0 0 25vw;
+  */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+}
+
+/****bounce 효과***/
+/*   html container 옆에 bounce 입력
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1.6s;
+  animation-timing-function: ease;
+  transform-origin: 50% 100%;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0%) scaleY(0.6);
+  }
+  60% {
+    transform: translateY(-100%) scaleY(1.1);
+  }
+  70% {
+    transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+  }
+  80% {
+    transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+  90% {
+    transform: scaleY(0%) scaleY(0.95) scaleX(1);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+}
+*/
+
+/***뿔***/
+.horn {
+  position: absolute;
+  top: 3px;
+  left: 28px;
+  width: 20px;
+  height: 30px;
+  background: #d8e0cd;
+  border-radius: 30% 240% 100% 100%;
+}
+
+.horn.right {
+  border-radius: 240% 30% 100% 100%;
+  left: 100px;
+}
+
+/***머리***/
+.head {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #aed137;
+  border-radius: 100%;
+}
+
+.head:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 33px;
+  background: #aed137;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.head:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -2px;
+  background: #aed137;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+/***눈***/
+.eye {
+  z-index: 2;
+  position: absolute;
+  top: 24px;
+  left: 33px;
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+/***눈알***/
+.iris {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 60px;
+  height: 60px;
+  background: #199e6c;
+  border-radius: 100%;
+}
+
+.iris::before {
+  content: "";
+  position: absolute;
+  left: 45px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #fff;
+  border-bottom: 10px solid transparent;
+}
+
+/***입***/
+.mouth {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 30px;
+  height: 30px;
+  background: #176a46;
+  border-radius: 100%;
+}
+.mouth::after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: -10px;
+  background: #aed137;
+  width: 30px;
+  height: 30px;
+}
+
+/***손***/
+.hand {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 20px;
+  height: 100px;
+  background: #aed137;
+  border-radius: 10px;
+  transform: rotate(140deg);
+}
+/*
+.wiggle {
+  display: inline-block;
+  animation: wiggle 2.5s infinite;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: translate(0deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+*/
+
+/*
+.tossing {
+  animation-name: tossing;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+*/
+
+/*
+.floating {
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+*/
+
+/*
+.left {
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+*/
+
+.hand.right {
+  transform: rotate(40deg);
+  top: 20px;
+  left: 140px;
+}
+
+/***다리***/
+.leg {
+  position: absolute;
+  top: 140px;
+  left: 43px;
+  width: 20px;
+  height: 60px;
+  background: #aed137;
+}
+.leg::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: -5px;
+  width: 30px;
+  height: 20px;
+  border-radius: 200% 200% 100% 100%;
+  background: #aed137;
+}
+
+.nail {
+  position: absolute;
+  top: 64px;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10px;
+}
+.nail.one {
+  left: 8px;
+}
+.nail.two {
+  left: 16px;
+}
+.leg.two {
+  left: 85px;
+}
+
+/***********tit 영역***********/
+/*
+.main_tit {
+  display: flex;
+  align-items: center;
+  margin: 25vh 0 0 58vw;
+  font-size: 15vh;
+  color: #176a46;
+}
+*/
+
+h1 {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 "Signika", sans-serif;
+  user-select: none;
+}
+
+h1 span {
+  display: inline-block;
+  animation: float 0.2s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: none;
+  }
+  33% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+  66% {
+    transform: translateY(1px) rotate(2deg);
+  }
+}
+body:hover span {
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+
+span:nth-child(4n) {
+  color: hsl(50, 75%, 55%);
+  text-shadow: 1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%),
+    3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%);
+}
+span:nth-child(4n-1) {
+  color: hsl(135, 35%, 55%);
+  text-shadow: 1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%),
+    3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%);
+}
+span:nth-child(4n-2) {
+  color: hsl(155, 35%, 60%);
+  text-shadow: 1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%),
+    3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%);
+}
+span:nth-child(4n-3) {
+  color: hsl(30, 65%, 60%);
+  text-shadow: 1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%),
+    3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 0.45s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(12) {
+  animation-delay: 0.55s;
+}
+h1 span:nth-child(13) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(14) {
+  animation-delay: 0.65s;
+}
+
+/*****************sec2************************/
+#sec2 {
+  width: 100%;
+}
