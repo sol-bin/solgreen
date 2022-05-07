@@ -308,6 +308,7 @@
 }
 
 /***************m********************/
+
 @media screen and (max-width:1024px) {
   .me img {
     width: 200px;
@@ -316,7 +317,7 @@
     bottom: 37.5%;
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
   .me img {
     width: 150px;
   }
@@ -328,6 +329,9 @@
   }
   
 }
+
+
+
 
 
 
@@ -493,6 +497,7 @@
 
 
 /***************m********************/
+
 @media screen and (max-width:1024px) {
 
   #sec3 .portfolio {
@@ -524,8 +529,11 @@
   #modal .body img{
     width: 80%;
   }
+  #sec3 h2 {
+    margin-bottom: 0px; 
+  }
 } 
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
   #sec3 .portfolio {
     top:1.5%;
   }
@@ -533,6 +541,9 @@
     margin-bottom: 30px;
   }
 }
+
+
+
 
 /***************sec4************/
 #sec4 {
@@ -628,7 +639,7 @@
     width: 200px;
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
   .web_box {
     flex-direction: column;
   }
@@ -639,7 +650,6 @@
     margin-bottom: 20px;
   }
 }
-
 
 
 
@@ -731,7 +741,7 @@
     width: 65px;
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
   .progress-container {
     top: 122%;
   }
@@ -739,3 +749,6 @@
     width: 55px;
   }
 }
+
+
+
